@@ -31,7 +31,7 @@ CSRF_COOKIE_SECURE = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     '192.168.0.15',
-    'bunnycook.pythonanywhere.com'
+    'cookbunny.pythonanywhere.com'
 ]
 
 # Application definition
@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bunnycook$default',
-        'USER': 'bunnycook',
+        'NAME': 'cookbunny$default',
+        'USER': 'cookbunny',
         'PASSWORD': os.getenv('MYSQL_PASSWORD'),
-        'HOST': 'bunnycook.mysql.pythonanywhere-services.com',
+        'HOST': 'cookbunny.mysql.pythonanywhere-services.com',
         'OPTIONS': {
             'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
