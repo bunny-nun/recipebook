@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+{{ block.super }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="top">
+    <h1 class="top_mid_title">
+        {{ recipe.title }}
+    </h1>
+    <div class="all_recipes">
+        <p class="all_recipes_text">
+        <strong>Описание:</strong> {{ recipe.description }}<br><br>
+        <strong>Ингредиенты:</strong> {{ recipe.ingredients }}<br><br>
+        <strong>Шаги приготовления:</strong> {{ recipe.steps }}<br><br>
+        <strong>Время приготовления:</strong> {{ recipe.cooking_time }}<br><br>
+        <strong>Автор:</strong> {{ recipe.author }}<br><br>
+        <strong>Дата создания:</strong> {{ recipe.created_at }}
+        </p>
+         <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="recipe_image">
+        {% if request.user == recipe.author %}
+            <a href="{% url 'edit_recipe' recipe.id %}" class="all_recipes_link">Редактировать</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

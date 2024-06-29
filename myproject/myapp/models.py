@@ -12,6 +12,10 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
+
 
 class Recipe(models.Model):
     title = models.CharField(max_length=128, verbose_name='Название блюда',
@@ -39,6 +43,10 @@ class Recipe(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        verbose_name = 'Рецепт'
+        verbose_name_plural = 'Рецепты'
+
 
 class RecipeCategory(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE,
@@ -48,5 +56,5 @@ class RecipeCategory(models.Model):
 
     class Meta:
         unique_together = ('recipe', 'category')
-        verbose_name = 'Категория'
-        verbose_name_plural = 'Категории'
+        verbose_name = 'Категория блюда'
+        verbose_name_plural = 'Категории блюда'

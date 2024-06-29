@@ -14,8 +14,8 @@
                href="/add/">Добавить рецепт</a>
             <a class="header_link{% if request.path|contains:'/recipes/' %}_selection{% endif %}"
                href="/recipes/">Все рецепты</a>
-            <a class="header_link{% if request.path|contains:'/myrecipies/' %}_selection{% endif %}"
-               href="/myrecipies/">Мои рецепты</a>
+            <a class="header_link{% if request.path|contains:'/myrecipes/' %}_selection{% endif %}"
+               href="/myrecipes/">Мои рецепты</a>
             {% if user.is_authenticated %}
                 <a class="button" href="/logout/">Выйти</a>
             {% else %}

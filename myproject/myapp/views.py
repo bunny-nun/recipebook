@@ -1,11 +1,9 @@
 import logging
+import random
 from django.shortcuts import render
 from .forms import UserForm, RecipeForm
 from .models import *
 from django.shortcuts import render, get_object_or_404, redirect
-from django.utils import timezone
-from datetime import timedelta
-from django.core.files.storage import FileSystemStorage
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -15,7 +13,17 @@ logger = logging.getLogger(__name__)
 
 
 def index(request):
-    context = {'title': 'Главная'}
+    recipes = Recipe.objects.all()
+    recipe_of_the_day = random.choice(recipes)
+    minor_recipes = []
+    for _ in range(3):
+        minor_recipes.append(random.choice(recipes))
+
+    context = {'title': 'Главная',
+               'recipe_of_the_day': recipe_of_the_day,
+               'minor_recipe_1': minor_recipes[0],
+               'minor_recipe_2': minor_recipes[1],
+               'minor_recipe_3': minor_recipes[2], }
     return render(request, 'index.html', context)
 
 
@@ -79,6 +87,8 @@ def add_recipe(request):
             recipe = form.save(commit=False)
             recipe.author = request.user
             recipe.save()
+            categories = form.cleaned_data['categories']
+            recipe.categories.set(categories)
             messages.success(request, 'Рецепт успешно создан')
             return redirect('index')
     else:
@@ -89,3 +99,57 @@ def add_recipe(request):
         'title': 'Добавить рецепт'
     }
     return render(request, 'add.html', context)
+
+
+def show_all_recipes(request):
+    recipes = Recipe.objects.all()
+    context = {'title': 'Главная',
+               'recipes': recipes
+               }
+    return render(request, 'recipes.html', context)
+
+
+def recipe_detail(request, recipe_id):
+    recipe = get_object_or_404(Recipe, pk=recipe_id)
+    context = {
+        'title': recipe.title,
+        'recipe': recipe,
+    }
+    return render(request, 'recipe.html', context)
+
+
+@login_required
+def my_recipes(request):
+    recipes = Recipe.objects.filter(author=request.user)
+
+    context = {
+        'title': f'Мои рецепты',
+        'recipes': recipes
+    }
+
+    return render(request, 'myrecipes.html', context)
+
+
+def edit_recipe(request, recipe_id):
+    recipe = get_object_or_404(Recipe, pk=recipe_id)
+    if request.user != recipe.author:
+        return redirect('index')
+    if request.method == 'POST':
+        form = RecipeForm(request.POST, request.FILES, instance=recipe)
+        if form.is_valid():
+            form.save()
+            return redirect('recipe_detail', recipe_id=recipe_id)
+    else:
+        form = RecipeForm(instance=recipe)
+
+    context = {
+        'form': form,
+        'recipe': recipe,
+        'title': f'Редактировать рецепт',
+    }
+    return render(request, 'edit.html', context)
+
+
+def page_not_found(request, exception):
+    context = {'title': 'Страница не найдена'}
+    return render(request, "myapp/404.html", context, status=404)

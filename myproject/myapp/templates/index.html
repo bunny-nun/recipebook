@@ -40,57 +40,49 @@
             Рецепт дня
         </h2>
         <h5 class="content_subtitle">
-            Шоколадный торт с малиновым муссом
+            {{ recipe_of_the_day.title}}
         </h5>
         <p class="content_text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
-            ratione libero. Iste impedit eum veniam quo ex vero
-            tenetur iure sed? Reiciendis unde eius, natus possimus saepe
-            beatae. Velit eos doloribus asperiores quidem, recusandae
-            magni quo nemo, ratione sit distinctio sunt inventore accusamus
-            ipsa labore quisquam molestias.
+            {{ recipe_of_the_day.description}}
         </p>
         <div class="content_link">
-            <a href="#">Подробнее...</a>
+            <a href="{% url 'recipe_detail' recipe_of_the_day.id %}">Подробнее...</a>
         </div>
     </div>
 </div>
 
 <div class="recipes">
     <div class="recipe">
-        <h5 class="recipes_title">Вегетарианская лазанья с овощами</h5>
+        <h5 class="recipes_title">
+            {{ minor_recipe_1.title}}
+        </h5>
         <p class="recipes_text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-            incidunt nostrum perferendis quis ut porro maiores rerum
-            eius eligendi nulla nesciunt obcaecati deleniti autem sed illum
-            assumenda, quos officiis aliquam.
+            {{ minor_recipe_1.description}}
         </p>
         <div class="recipes_link">
-            <a href="#">Подробнее...</a>
+            <a href="{% url 'recipe_detail' minor_recipe_1.id %}">Подробнее...</a>
         </div>
     </div>
     <div class="recipe">
-        <h5 class="recipes_title">Вегетарианская лазанья с овощами</h5>
+        <h5 class="recipes_title">
+            {{ minor_recipe_2.title}}
+        </h5>
         <p class="recipes_text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-            incidunt nostrum perferendis quis ut porro maiores rerum
-            eius eligendi nulla nesciunt obcaecati deleniti autem sed illum
-            assumenda, quos officiis aliquam.
+            {{ minor_recipe_2.description}}
         </p>
         <div class="recipes_link">
-            <a href="#">Подробнее...</a>
+            <a href="{% url 'recipe_detail' minor_recipe_2.id %}">Подробнее...</a>
         </div>
     </div>
     <div class="recipe">
-        <h5 class="recipes_title">Вегетарианская лазанья с овощами</h5>
+        <h5 class="recipes_title">
+            {{ minor_recipe_3.title}}
+        </h5>
         <p class="recipes_text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-            incidunt nostrum perferendis quis ut porro maiores rerum
-            eius eligendi nulla nesciunt obcaecati deleniti autem sed illum
-            assumenda, quos officiis aliquam.
+            {{ minor_recipe_3.description}}
         </p>
         <div class="recipes_link">
-            <a href="#">Подробнее...</a>
+            <a href="{% url 'recipe_detail' minor_recipe_3.id %}">Подробнее...</a>
         </div>
     </div>
 </div>

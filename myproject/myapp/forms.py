@@ -80,7 +80,7 @@ class RecipeForm(forms.ModelForm):
         queryset=Category.objects.all(),
         widget=forms.SelectMultiple(attrs={
             'class': 'form-control placeholder',
-            'placeholder': 'Выберите категории'}),
+            'placeholder': 'Выберите категорию'}),
         label=''
     )
 

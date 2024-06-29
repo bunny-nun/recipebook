@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+{{ block.super }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="top">
+    <h1 class="top_mid_title">
+        Рецепты
+    </h1>
+    {% for recipe in recipes %}
+    <div class="all_recipes">
+        <h5 class="all_recipes_title">
+            {{ recipe.title}}
+        </h5>
+        <p class="all_recipes_text">
+            {{ recipe.description}}
+        </p>
+        <div class="all_recipes_link">
+            <a href="{% url 'recipe_detail' recipe.id %}">Подробнее...</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

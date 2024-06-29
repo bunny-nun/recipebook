@@ -10,13 +10,13 @@
 
 <div class="top">
     <h1 class="top_mid_title">
-        Добавьте новый рецепт
+        Редактируйте рецепт
     </h1>
     <div class="form">
         <form method="post" enctype="multipart/form-data" class="placeholder">
             {% csrf_token %}
             {{ form.as_div }}
-            <input type="submit" value="Добавить" class="submit">
+            <input type="submit" value="Сохранить" class="submit">
         </form>
     </div>
 </div>
