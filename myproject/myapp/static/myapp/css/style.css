@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../fonts/gilroy-bold.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('../fonts/gilroy-bold.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('../fonts/gilroy-bold.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/gilroy-bold.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('../fonts/gilroy-bold.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/gilroy-bold.svg#gilroy-bold') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('../fonts/gilroy-medium.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('../fonts/gilroy-medium.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('../fonts/gilroy-medium.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/gilroy-medium.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('../fonts/gilroy-medium.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/gilroy-medium.svg#gilroy-medium') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: url('../fonts/gilroy-semibold.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('../fonts/gilroy-semibold.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('../fonts/gilroy-semibold.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/gilroy-semibold.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('../fonts/gilroy-semibold.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/gilroy-semibold.svg#gilroy-semibold') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('../fonts/gilroy-regular.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('../fonts/gilroy-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('../fonts/gilroy-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/gilroy-regular.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('../fonts/gilroy-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/gilroy-regular.svg#gilroy-regular') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #FFF;
+}
+
+body .picture {
+    width: 350px;
+    height: 350px;
+    border-radius: 25px;
+    border: 1px solid #000;
+}
+
+.top {
+    padding: 40px 300px 200px 300px;
+}
+
+.top header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.top header .logo_group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.top header .logo_group .logo_image {
+    width: 200px;
+}
+
+.top header .header_menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    height: 100%;
+}
+
+.top header .header_menu .header_link {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #000;
+    font-size: 20px;
+    font-family: 'Gilroy-SemiBold';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.top header .header_menu .header_link_selection {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #F19F99;
+    font-size: 20px;
+    font-family: 'Gilroy-SemiBold';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.top header .header_menu .button {
+    margin-left: 15px;
+    width: 200px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border-width: 0;
+    background: #F19F99;
+    color: #FFF;
+    font-size: 18px;
+    font-family: 'Gilroy-SemiBold';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top header .header_menu .button_log {
+    margin-left: 15px;
+    width: 100px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border-width: 0;
+    background: #F19F99;
+    color: #FFF;
+    font-size: 18px;
+    font-family: 'Gilroy-SemiBold';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top .top_content {
+    padding-top: 95px;
+    padding-bottom: 103px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top .top_content .top_text {
+
+}
+
+.top .top_content .top_text .top_title {
+    width: 522px;
+    height: 200px;
+    color: #000;
+    font-size: 60px;
+    font-family: 'Gilroy-Bold';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.top .top_content .top_text .top_info {
+    width: 466px;
+    height: 78px;
+    color: #888;
+    font-size: 20px;
+    font-family: 'Gilroy-Medium';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.top .top_content .top_text .top_buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 37px;
+}
+
+.top .top_content .top_text .top_buttons .button {
+    width: 200px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border-width: 0;
+    background: #F19F99;
+    color: #FFF;
+    font-size: 18px;
+    font-family: 'Gilroy-SemiBold';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top .top_mid_title {
+    color: #000;
+    font-size: 60px;
+    font-family: 'Gilroy-Bold';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.top .form {
+    padding-top: 60px;
+    padding-bottom: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top .form .placeholder, .top .form input[type="password"], .top .form input[type="text"] {
+    margin-bottom: 15px;
+    width: 250px;
+    height: 35px;
+    padding-left: 10px;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: #666;
+    outline-color: #666;
+    color: #666;
+    font-family: 'Gilroy-Regular';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.top .form .form-control {
+    margin-bottom: 10px;
+    width: 250px;
+    padding-left: 10px;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: #666;
+    outline-color: #666;
+    color: #666;
+    font-family: 'Gilroy-Regular';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.top .form textarea.form-control {
+    height: 120px;
+    resize: vertical;
+}
+
+.top .form .help-text {
+    font-family: 'Gilroy-Regular';
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.top .form .error-message {
+    font-family: 'Gilroy-Regular';
+    font-size: 12px;
+    color: red;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 250px;
+    height: 35px;
+    padding-left: 10px;
+}
+
+.top .form .submit {
+    margin-left: 60px;
+    width: 140px;
+    height: 40px;
+    border-radius: 50px;
+    border-width: 0;
+    background: #F19F99;
+    box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.20);
+    margin-right: 27px;
+    color: #FFF;
+    font-size: 15px;
+    font-family: 'Gilroy-Bold';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-items: center;
+}
+
+.top .notification {
+    padding-top: 100px;
+    padding-bottom: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    }
+
+.content {
+    height: 540px;
+    padding: 0 300px;
+    background: #FFF8EC;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content .content_content .content_title {
+    width: 515px;
+    height: 112px;
+    color: #000;
+    font-family: 'Gilroy-Bold';
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.content .content_content .content_subtitle {
+    width: 515px;
+    height: 60px;
+    color: #000;
+    font-family: 'Gilroy-Bold';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.content .content_content .content_text {
+    width: 515px;
+    color: #666;
+    font-family: 'Gilroy-Regular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-top: 20px;
+}
+
+.content .content_content .content_link {
+    margin-top: 50px;
+}
+
+.content .content_content .content_link a {
+    color: #000;
+    font-family: 'Gilroy-Bold';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.recipes {
+    height: 491px;
+    padding: 100px 300px;
+    background: #FFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recipes .recipe {
+    width: 370px;
+    box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
+    padding-top: 35px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    border-radius: 10px;
+}
+
+.recipes .recipes_title {
+    color: #000;
+    font-family: 'Gilroy-Bold';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 25px;
+}
+
+.recipes .recipes_text {
+    color: #666;
+    font-family: 'Gilroy-Regular';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-top: 17px;
+    height: 90px;
+}
+
+.recipes .recipes_link {
+    margin-top: 25px;
+}
+
+.recipes .recipes_link a {
+    color: #000;
+    font-family: 'Gilroy-Bold';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+footer {
+    height: 200px;
+    margin-top: 150px;
+    padding: 0 300px;
+    background: #FFF8EC;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .footer_text {
+    color: #666;
+    font-family: 'Gilroy-Regular';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+
+.toggle-content {
+    display: none;
+}

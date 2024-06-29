@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+{{ block.super }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="top">
+    <h1 class="top_mid_title">
+        Добавьте новый рецепт:
+    </h1>
+    <div class="form">
+        <form method="post" enctype="multipart/form-data" class="placeholder">
+            {% csrf_token %}
+            {{ form.as_div }}
+            <input type="submit" value="Добавить" class="submit">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

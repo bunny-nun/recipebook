@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+{{ block.super }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="top">
+    <h1 class="top_mid_title">
+        Авторизация
+    </h1>
+    <div class="form">
+            {% if messages %}
+                <div class="error-message">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <form action="" method="post" class="placeholder">
+
+            {% csrf_token %}
+            {% for field in form %}
+                {{ field.label_tag }}
+                    {{ field }}
+                    {% for error in field.errors %}
+                        <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+            {% endfor %}
+            <input type="submit" value="Войти" class="submit">
+            </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+{{ block.super }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="top">
+    <h1 class="top_mid_title">
+        Поздравляем с успешной регистрацией!
+    </h1>
+    <div class="notification">
+        <img src="{% static 'myapp/images/reg.png' %}" class="picture">
+    </div>
+</div>
+{% endblock %}

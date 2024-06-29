@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+{{ block.super }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="top">
+    <div class="top_content">
+        <div class="top_text">
+            <h1 class="top_title">
+                Найди свой лучший рецепт
+            </h1>
+            <p class="top_info">
+                Погрузись в разнообразие вкусов, открой для себя новые
+                рецепты и удиви своих близких кулинарными талантами. У нас
+                каждый рецепт превращается в кулинарное искусство!
+            </p>
+            <div class="top_buttons">
+                <a class="button" href="/myapp/recipes/">Рецепты</a>
+            </div>
+        </div>
+
+        <div class="top_image">
+            <img src="{% static 'myapp/images/top.png' %}" class="picture">
+        </div>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="content_image">
+        <img src="{% static 'myapp/images/content.png' %}"
+             alt="graphic" class="picture">
+    </div>
+    <div class="content_content">
+        <h2 class="content_title">
+            Рецепт дня
+        </h2>
+        <h5 class="content_subtitle">
+            Шоколадный торт с малиновым муссом
+        </h5>
+        <p class="content_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+            ratione libero. Iste impedit eum veniam quo ex vero
+            tenetur iure sed? Reiciendis unde eius, natus possimus saepe
+            beatae. Velit eos doloribus asperiores quidem, recusandae
+            magni quo nemo, ratione sit distinctio sunt inventore accusamus
+            ipsa labore quisquam molestias.
+        </p>
+        <div class="content_link">
+            <a href="#">Подробнее...</a>
+        </div>
+    </div>
+</div>
+
+<div class="recipes">
+    <div class="recipe">
+        <h5 class="recipes_title">Вегетарианская лазанья с овощами</h5>
+        <p class="recipes_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+            incidunt nostrum perferendis quis ut porro maiores rerum
+            eius eligendi nulla nesciunt obcaecati deleniti autem sed illum
+            assumenda, quos officiis aliquam.
+        </p>
+        <div class="recipes_link">
+            <a href="#">Подробнее...</a>
+        </div>
+    </div>
+    <div class="recipe">
+        <h5 class="recipes_title">Вегетарианская лазанья с овощами</h5>
+        <p class="recipes_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+            incidunt nostrum perferendis quis ut porro maiores rerum
+            eius eligendi nulla nesciunt obcaecati deleniti autem sed illum
+            assumenda, quos officiis aliquam.
+        </p>
+        <div class="recipes_link">
+            <a href="#">Подробнее...</a>
+        </div>
+    </div>
+    <div class="recipe">
+        <h5 class="recipes_title">Вегетарианская лазанья с овощами</h5>
+        <p class="recipes_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+            incidunt nostrum perferendis quis ut porro maiores rerum
+            eius eligendi nulla nesciunt obcaecati deleniti autem sed illum
+            assumenda, quos officiis aliquam.
+        </p>
+        <div class="recipes_link">
+            <a href="#">Подробнее...</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+
+    <title>{% block title %} Рецепты {% endblock %}</title>
+    {% load static %}
+    {% load custom_tags %}
+    <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+</head>
+<body>
+
+{% include 'header.html' %}
+
+{% block content %}
+Страница не заполнена
+{% endblock %}
+
+<footer>
+    <p class="footer_text">
+        Copyright © Валерия Григорьева 2024. All Rights Reserved.
+    </p>
+</footer>
+</body>
+</html>
